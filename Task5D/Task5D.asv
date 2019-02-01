@@ -1,11 +1,11 @@
 A=readtable('Task1B1.dat');
-x=A{:,1};
+x=A{:,1}*.001;
 y=A{:,2};
 yfft=fft(y);
 
-Fs = 218450;            % Sampling frequency                    
+Fs = 222;            % Sampling frequency                    
 T = 1/Fs;             % Sampling period       
-L = 99.39;             % Length of signal(ms)
+L = 1000;             % Length of signal
 t = (0:L-1)*T;        % Time vector
 
 P2 = abs(yfft/L);
@@ -17,6 +17,7 @@ plot(f,P1)
 title('Single-Sided Amplitude Spectrum of X(t)')
 xlabel('f (Hz)')
 ylabel('|P1(f)|')
-xlim([0 300])
+xlim([0 100])
 
-%plot(x,y)
+plot(x,y)
+xlim([0 ])
