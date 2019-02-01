@@ -7,3 +7,5 @@ I3=.1*(cos(deg2rad(-89))+sin(deg2rad(-89))*1i);
 compass(I1,'r'); hold on
 compass(I2,'b');
 compass(I3,'g');
+
+legend('I1','I2','I3')
